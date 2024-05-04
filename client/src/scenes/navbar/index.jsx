@@ -24,6 +24,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "components/FlexBetween";
+import './nav.css';
 
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false); // navbar for mobile
@@ -42,35 +43,39 @@ const Navbar = () => {
   const username = `${user.username}`; // ${user.username}
 
   return (
-    <FlexBetween padding="1rem 6%" backgroundColor={alt}>
+    <FlexBetween padding="1rem 6% 1rem 2%" backgroundColor={alt}>
       <FlexBetween gap="1.75rem">
-        <Typography
-          fontWeight="bold"
-          fontSize="clamp(1rem, 2rem, 2.25rem)"
-          color="primary"
-          onClick={() => navigate("/home")}
-          sx={{
-            "&:hover": { // hover on the LOGO
-              color: primaryLight,
-              cursor: "pointer",
-            },
-          }}
-        >
-          Sociopedia
-        </Typography>
-        {isNonMobileScreens && ( // dont show if mobile screen
-          <FlexBetween
-            backgroundColor={neutralLight}
-            borderRadius="9px"
-            gap="3rem"
-            padding="0.1rem 1.5rem"
-          >
-            <InputBase placeholder="Search..." />
-            <IconButton>
-              <Search />
-            </IconButton>
-          </FlexBetween>
-        )}
+        <div style={{ display: 'flex'}}>
+          {/* LOGO */}
+          <div style={{ maxHeight:'50px', height: '100%'}}>
+            <button onClick={() => navigate("/home")} style={{ border: 'none', background: 'none', cursor: 'pointer', alignSelf: 'center' }}>
+                <img src="../../../../assets/LB Logo (Dark).png" alt=""
+                style={{ maxWidth: '100%', maxHeight: '50px', width: 'auto', height: 'auto' }}
+                />
+            </button>
+          </div>
+          <div style={{ display: 'flex'}}>
+            {/* Home */}
+            <div className="homeBut" style={{ height: '50%' }}>
+              <button onClick={() => navigate("/home")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
+                  <h2>Home</h2>
+              </button>
+            </div>
+            {/* Community */}
+            <div className="commBut" style={{ height: '50%' }}>
+              <button onClick={() => navigate("/home")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
+                  <h2>Community</h2>
+              </button>
+            </div>
+            {/* Services */}
+            <div className="servicesBut" style={{ height: '50%' }}>
+              <button onClick={() => navigate("/home")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
+                  <h2>Services</h2>
+              </button>
+            </div>
+          </div>
+          
+        </div>
       </FlexBetween>
 
       {/* DESKTOP NAV */}

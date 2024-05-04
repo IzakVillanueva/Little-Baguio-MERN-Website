@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.homeBut{
+    margin-right: 10%;
+    margin-left: 60%;
+}
+
+.commBut{
+    margin-right: 10%;
+}
+
+.servicesBut{
+    margin-right: 10%;
+}
