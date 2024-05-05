@@ -29,6 +29,7 @@ import {
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
     const [image, setImage] = useState(null);
+    const [title, setTitle] = useState("");
     const [post, setPost] = useState("");
     const { palette } = useTheme();
     const { _id } = useSelector((state) => state.user);
@@ -40,13 +41,14 @@ import {
     const handlePost = async () => {
       const formData = new FormData();
       formData.append("userId", _id);
+      formData.append("title", title);
       formData.append("description", post);
       if (image) {
         formData.append("picture", image);
         formData.append("picturePath", image.name);
       }
   
-      const response = await fetch(`http://localhost:3001/news`, {
+      const response = await fetch(`http://localhost:3001/posts`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
@@ -55,12 +57,25 @@ import {
       dispatch(setPosts({ posts }));
       setImage(null);
       setPost("");
+      setTitle("");
     };
   
     return (
       <WidgetWrapper>
         <FlexBetween gap="1.5rem">
-          <UserImage image={picturePath} />
+          <InputBase
+            placeholder="State your title"
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
+            sx={{
+              width: "100%",
+              backgroundColor: palette.neutral.light,
+              borderRadius: "2rem",
+              padding: "1rem 2rem",
+            }}
+          />
+        </FlexBetween>
+        <FlexBetween gap="1.5rem">
           <InputBase
             placeholder="What's on your mind..."
             onChange={(e) => setPost(e.target.value)}

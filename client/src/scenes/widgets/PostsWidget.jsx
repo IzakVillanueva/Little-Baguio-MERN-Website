@@ -17,34 +17,31 @@ const PostsWidget = ({ userId, isProfile = false }) => {
     dispatch(setPosts({ posts: data }));
   };
 
-  const getUserPosts = async () => {
-    const response = await fetch(
-      `http://localhost:3001/posts/${userId}/posts`,
-      {
-        method: "GET",
-        headers: { Authorization: `Bearer ${token}` },
-      }
-    );
-    const data = await response.json();
-    dispatch(setPosts({ posts: data }));
-  };
+//   const getUserPosts = async () => {
+//     const response = await fetch(
+//       `http://localhost:3001/posts/${userId}/posts`,
+//       {
+//         method: "GET",
+//         headers: { Authorization: `Bearer ${token}` },
+//       }
+//     );
+//     const data = await response.json();
+//     dispatch(setPosts({ posts: data }));
+//   };
 
   useEffect(() => {
-    if (isProfile) {
-      getUserPosts();
-    } else {
-      getPosts();
-    }
+    getPosts();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
+  
   return (
     <>
-      {posts.map(
+      {Array.isArray(posts)&&
+      posts.map(
         ({
           _id,
           userId,
-          firstName,
-          lastName,
+          username,
+          title,
           description,
           location,
           picturePath,
@@ -56,7 +53,8 @@ const PostsWidget = ({ userId, isProfile = false }) => {
             key={_id}
             postId={_id}
             postUserId={userId}
-            name={`${firstName} ${lastName}`}
+            name={username}
+            title={title}
             description={description}
             location={location}
             picturePath={picturePath}
