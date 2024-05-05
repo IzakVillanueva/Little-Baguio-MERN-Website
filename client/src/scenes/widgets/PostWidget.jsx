@@ -55,7 +55,11 @@ import {
           subtitle={location}
           userPicturePath={userPicturePath}
         /> */}
-        <Typography color={main} sx={{ mt: "1rem" }}>
+        <Typography sx={{ 
+          mt: "0.2rem",
+          color:"#4EAE8A",
+          fontWeight: "600",
+          fontSize: "1.7em" }}>
           {title}
         </Typography>
         <Typography color={main} sx={{ mt: "1rem" }}>
