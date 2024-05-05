@@ -7,6 +7,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { Message, } from "@mui/icons-material";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -134,8 +135,10 @@ const Form = () => {
                   }
                   helperText={touched.username && errors.username}
                   sx={{ gridColumn: "span 4" }}
+                  InputProps={{ sx: { borderRadius: "3em"} }}
+                  InputLabelProps={{ sx: { left: "1rem" }}}
                 />
-                <Box
+                {/* <Box
                   gridColumn="span 4"
                   border={`1px solid ${palette.neutral.medium}`} //for borders
                   borderRadius="5px"
@@ -167,7 +170,7 @@ const Form = () => {
                       </Box>
                     )}
                   </Dropzone>
-                </Box>
+                </Box> */}
               </>
             )}
 
@@ -179,7 +182,9 @@ const Form = () => {
               name="email"
               error={Boolean(touched.email) && Boolean(errors.email)}
               helperText={touched.email && errors.email}
-              sx={{ gridColumn: "span 4" }}
+              sx={{ gridColumn: "span 4"}}
+              InputProps={{ sx: { borderRadius: "3em"} }}
+              InputLabelProps={{ sx: { left: "1rem" }}}
             />
             <TextField
               label="Password"
@@ -191,6 +196,8 @@ const Form = () => {
               error={Boolean(touched.password) && Boolean(errors.password)}
               helperText={touched.password && errors.password}
               sx={{ gridColumn: "span 4" }}
+              InputProps={{ sx: { borderRadius: "3em"} }}
+              InputLabelProps={{ sx: { left: "1rem" }}}
             />
           </Box>
 
@@ -202,9 +209,10 @@ const Form = () => {
               sx={{
                 m: "2rem 0",
                 p: "1rem",
-                backgroundColor: palette.primary.main,
+                backgroundColor: '#4EAE8A',
                 color: palette.background.alt,
-                "&:hover": { color: palette.primary.main },
+                "&:hover": { color: '#4EAE8A' },
+                borderRadius: "3em",
               }}
             >
               {isLogin ? "LOGIN" : "REGISTER"}
@@ -216,10 +224,10 @@ const Form = () => {
               }}
               sx={{
                 textDecoration: "underline",
-                color: palette.primary.main,
+                color: '#4EAE8A',
                 "&:hover": {
                   cursor: "pointer",
-                  color: palette.primary.light,
+                  color: '#c8f9e7',
                 },
               }}
             >
