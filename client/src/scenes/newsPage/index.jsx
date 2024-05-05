@@ -29,15 +29,23 @@ const NewsPage = () => {
             </Typography>
         </Box>
         <Box
-          flexBasis={isNonMobileScreens ? "42%" : undefined}
-          mt={isNonMobileScreens ? undefined : "2rem"}
+            justifyContent="center"
+            alignItems="center"
+            margin="auto"
         >
-            {isAdmin && (
-                <>
-                    <MyPostWidget picturePath={picturePath} />
-                </>
-            )}
-            <PostsWidget userId={_id} />
+            <Box
+                width={isNonMobileScreens ? "60vw" : "100vw"}
+                maxWidth="800px"
+                m="auto"
+            >
+                {isAdmin && (
+                    <>
+                        <MyPostWidget picturePath={picturePath} />
+                    </>
+                )}
+                <PostsWidget userId={_id} />
+            </Box>
+            
         </Box>
         
     </Box>);

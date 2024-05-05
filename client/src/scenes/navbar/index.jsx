@@ -53,6 +53,7 @@ const Navbar = () => {
       <FlexBetween gap="1.75rem">
         <div style={{ display: 'flex'}}>
           {/* LOGO */}
+          <FlexBetween gap="1.75rem">
           <div style={{ maxHeight:'50px', height: '100%'}}>
             <button onClick={() => navigate("/home")} style={{ border: 'none', background: 'none', cursor: 'pointer', alignSelf: 'center' }}>
                 <img src="../../../../assets/LB Logo (Dark).png" alt=""
@@ -60,6 +61,8 @@ const Navbar = () => {
                 />
             </button>
           </div>
+          </FlexBetween>
+          <FlexBetween gap="3rem">
           <div style={{ display: 'flex'}}>
             {/* Home */}
             <div className="homeBut" style={{ height: '50%' }}>
@@ -80,6 +83,7 @@ const Navbar = () => {
               </button>
             </div>
           </div>
+          </FlexBetween>
           
         </div>
       </FlexBetween>
