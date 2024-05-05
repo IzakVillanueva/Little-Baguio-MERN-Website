@@ -5,8 +5,17 @@ import PostsWidget from "scenes/widgets/PostsWidget";
 import MyPostWidget from "scenes/widgets/MyPostWidget";
 
 const NewsPage = () => {
+    const user = useSelector((state) => state.user);
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
     const { _id, picturePath } = useSelector((state) => state.user);
+    let isAdmin = false;
+
+    if (user !== null && user !== undefined) {
+        if(user.userType === "admin") {
+            isAdmin = true;
+        }
+    }
+
     return (<Box>
         <Navbar />
         <Box
@@ -23,7 +32,11 @@ const NewsPage = () => {
           flexBasis={isNonMobileScreens ? "42%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
-            <MyPostWidget picturePath={picturePath} />
+            {isAdmin && (
+                <>
+                    <MyPostWidget picturePath={picturePath} />
+                </>
+            )}
             <PostsWidget userId={_id} />
         </Box>
         
