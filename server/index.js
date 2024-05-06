@@ -25,7 +25,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
     {
-        origin:[""],
+        origin:["https://littlebaguio-api.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
