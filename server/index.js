@@ -27,7 +27,7 @@ const app = express();
 app.use(cors(
     {
         origin:["https://littlebaguio.vercel.app"],
-        methods: ["POST", "GET"],
+        methods: ["POST", "GET", "OPTIONS", "PUT", "DELETE"],
         credentials: true
     }
 ));
