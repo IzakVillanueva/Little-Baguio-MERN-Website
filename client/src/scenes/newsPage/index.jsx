@@ -7,7 +7,8 @@ import MyPostWidget from "scenes/widgets/MyPostWidget";
 const NewsPage = () => {
     const user = useSelector((state) => state.user);
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
-    const { _id, picturePath } = useSelector((state) => state.user);
+    const _id = user ? user._id : null;
+    const { picturePath } = user || {};
     let isAdmin = false;
 
     if (user !== null && user !== undefined) {

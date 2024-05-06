@@ -34,7 +34,7 @@ function App() {
             />
             <Route 
               path="/news" 
-              element={<NewsPage />} 
+              element={isAuth ? <NewsPage /> : <Navigate to="/login" />} 
             />
             <Route
               path="/profile/:userId"
