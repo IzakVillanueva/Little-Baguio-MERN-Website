@@ -59,7 +59,7 @@ const Form = () => {
     formData.append("picturePath", "person.jpg");
 
     const savedUserResponse = await fetch(
-      "http://localhost:3001/auth/register",
+      "https://littlebaguio-api.vercel.app/auth/register",
       {
         method: "POST",
         body: formData,
