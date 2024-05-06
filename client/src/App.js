@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import HomePage from "scenes/homePage";
 import LoginPage from "scenes/loginPage";
 import ProfilePage from "scenes/profilePage";
+import NewsPage from "scenes/newsPage";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -30,6 +31,10 @@ function App() {
             <Route 
               path="/login" 
               element={<LoginPage />} 
+            />
+            <Route 
+              path="/news" 
+              element={<NewsPage />} 
             />
             <Route
               path="/profile/:userId"
