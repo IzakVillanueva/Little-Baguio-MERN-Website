@@ -53,7 +53,7 @@ app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
 /* MONGOOSE SETUP */
-const PORT = 'https://littlebaguio-api.onrender.com';
+const PORT = process.env.PORT || 4000;
 console.log(process.env.MONGO_URL);
 mongoose
 .connect(process.env.MONGO_URL, {
