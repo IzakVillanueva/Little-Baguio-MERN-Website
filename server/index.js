@@ -19,9 +19,6 @@ import Post from "./models/Post.js";
 import { users, posts } from "./data/index.js";
 
 /* CONFIGURATIONS */
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
 const app = express();
 app.use(cors(
     {
