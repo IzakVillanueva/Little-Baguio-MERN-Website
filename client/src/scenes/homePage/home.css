@@ -53,7 +53,7 @@
     font-family: "Roboto Slab-Bold", Helvetica;
     font-size: 48px;
     font-weight: 700;
-    left: 90px
+    left: 90px;
     letter-spacing: 0; 
     line-height: normal;
     position: absolute;
@@ -62,11 +62,11 @@
 }
 
 .about .div{
-    color: #2f2f2f
+    color: #2f2f2f;
     font-family: "Montserrat_Light", Helvetica;
     font-size: 36px;
     font-weight: 300;
-    left: 95px
+    left: 95px;
     letter-spacing: 0; 
     line-height: normal;
     position: absolute;
@@ -199,7 +199,7 @@
   }
   
   .community-forum .overlap-group {
-    background-image: url(./rectangle-18.png);
+    /* background-image: url(./rectangle-18.png); */
     background-position: 50% 50%;
     background-size: cover;
     height: 673px;
@@ -571,7 +571,7 @@
   }
   
   .footer .overlap {
-    background-image: url(./background.svg);
+    /* background-image: url(./background.svg); */
     background-size: 100% 100%;
     height: 511px;
     position: relative;

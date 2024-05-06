@@ -79,15 +79,15 @@ export const News = () => {
   export const EventsCalendar = () => {
     return (
       <div className="events-calendar">
-        <IconRight className="icon-left" color="#303030" />
-        <IconComponentNode className="icon-right" />
+        {/*<IconRight className="icon-left" color="#303030" />
+        <IconComponentNode className="icon-right" />*/}
         <div className="text-wrapper">Event Calendar</div>
         <div className="events">
           <div className="image-card-event">
             <div className="overlap-group">
               <div className="div">
                 <div className="month">Apr</div>
-                <img className="rectangle" alt="Rectangle" src="rectangle-9.svg" />
+                {/* <img className="rectangle" alt="Rectangle" src="rectangle-9.svg" /> */}
               </div>
               <div className="day">01</div>
             </div>
@@ -96,7 +96,7 @@ export const News = () => {
             <div className="overlap-group">
               <div className="div">
                 <div className="month">May</div>
-                <img className="rectangle" alt="Rectangle" src="image.svg" />
+                {/* <img className="rectangle" alt="Rectangle" src="image.svg" /> */}
               </div>
               <div className="day">12</div>
             </div>
@@ -105,7 +105,7 @@ export const News = () => {
             <div className="overlap-group">
               <div className="div">
                 <div className="month">Jun</div>
-                <img className="rectangle" alt="Rectangle" src="rectangle-9-2.svg" />
+                {/* <img className="rectangle" alt="Rectangle" src="rectangle-9-2.svg" /> */}
               </div>
               <div className="day">20</div>
             </div>
@@ -114,7 +114,7 @@ export const News = () => {
             <div className="overlap-group">
               <div className="div">
                 <div className="month">Aug</div>
-                <img className="rectangle" alt="Rectangle" src="rectangle-9-3.svg" />
+                {/* <img className="rectangle" alt="Rectangle" src="rectangle-9-3.svg" /> */}
               </div>
               <div className="day">30</div>
             </div>
@@ -123,7 +123,7 @@ export const News = () => {
             <div className="overlap-group">
               <div className="div">
                 <div className="month">Sep</div>
-                <img className="rectangle" alt="Rectangle" src="rectangle-9-4.svg" />
+                {/* <img className="rectangle" alt="Rectangle" src="rectangle-9-4.svg" /> */}
               </div>
               <div className="day">05</div>
             </div>
@@ -137,7 +137,7 @@ export const News = () => {
     return (
       <div className="community-forum">
         <div className="overlap-group">
-          <img className="rectangle" alt="Rectangle" src="rectangle-17.png" />
+          {/* <img className="rectangle" alt="Rectangle" src="rectangle-17.png" /> */}
           <div className="text-wrapper">Connect with Us!</div>
           <img className="button" alt="Button" src="button.svg" />
           <p className="join-our-community">
@@ -154,7 +154,7 @@ export const News = () => {
     return (
       <div className="trackin-requests">
         <div className="overlap">
-          <img className="rectangle" alt="Rectangle" src="rectangle-5.svg" />
+          {/* <img className="rectangle" alt="Rectangle" src="rectangle-5.svg" /> */}
           <div className="div" />
           <div className="text-wrapper">Track Your Requests!</div>
           <div className="forms">
@@ -162,7 +162,7 @@ export const News = () => {
             <div className="input-field-tracking">
               <div className="overlap-group">
                 <p className="p">Enter your Tracking Reference No.</p>
-                <img className="enter-your-name" alt="Enter your name" src="enter-your-name.svg" />
+                {/* <img className="enter-your-name" alt="Enter your name" src="enter-your-name.svg" /> */}
               </div>
             </div>
           </div>
@@ -187,19 +187,19 @@ export const News = () => {
             <div className="input-field-email">
               <div className="overlap-group-2">
                 <div className="enter-your-message">Enter your message...</div>
-                <img className="img" alt="Enter your message" src="enter-your-message.svg" />
+                {/* <img className="img" alt="Enter your message" src="enter-your-message.svg" /> */}
               </div>
             </div>
             <div className="input-field-name">
               <div className="overlap-2">
                 <div className="text-wrapper-2">Enter your name</div>
-                <img className="enter-your-name" alt="Enter your name" src="enter-your-name.svg" />
+                {/* <img className="enter-your-name" alt="Enter your name" src="enter-your-name.svg" /> */}
               </div>
             </div>
             <div className="overlap-wrapper">
               <div className="overlap-3">
                 <div className="text-wrapper-2">Enter your email</div>
-                <img className="enter-your-email" alt="Enter your email" src="enter-your-email.svg" />
+                {/* <img className="enter-your-email" alt="Enter your email" src="enter-your-email.svg" /> */}
               </div>
             </div>
             <div className="input-field-contact">
@@ -247,7 +247,7 @@ export const News = () => {
             <p className="address">Jose Abad Santos cor. Gen. Gutierrez St., Little Baguio, San Juan, Philippines</p>
             <div className="text-wrapper-5">Contact Us</div>
           </div>
-          <LittlebaguioLogo className="littlebaguio-logo-white-1" />
+          {/*<LittlebaguioLogo className="littlebaguio-logo-white-1" />*/}
         </div>
       </div>
     );
