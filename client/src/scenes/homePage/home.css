@@ -77,121 +77,60 @@
 
 .news {
     background-color: #baf0fc;
-    height: 766px;
     position: relative;
-    width: 1680px;
-  }
+    width: 100%;
+    padding: 4rem 3rem;
+}
+
+.newsFirstRow {
+  display: flex;
+  margin: 1rem 0;
+
+}
   
-.news .news-updates {
+.news-updates {
   color: #2f2f2f;
-  font-family: "Roboto Slab-Bold", Helvetica;
-  font-size: 48px;
+  font-family: "Montserrat", Helvetica;
+  font-size: 3.5em;
   font-weight: 700;
-  left: 67px;
   letter-spacing: 0;
+  margin-bottom: 3rem;
   line-height: normal;
-  position: absolute;
-  top: 90px;
-  width: 402px;
 }
 
 .news .image-card {
-  height: 170px;
-  left: 67px;
-  position: absolute;
-  top: 218px;
-  width: 662px;
+  display: flex;
+  width: 40vw;
 }
-
-.news .overlap-group {
-  height: 158px;
-  left: 244px;
-  position: absolute;
-  top: 13px;
-  width: 416px;
-}
-
 .news .button {
-  height: 47px;
-  left: 5px;
-  position: absolute;
-  top: 111px;
-  width: 170px;
+  object-fit: cover;
+  height: 2.3rem;
+  margin-top: 2rem;
 }
 
 .news .text-wrapper {
   color: #2f2f2f;
-  font-family: "Montserrat-Medium", Helvetica;
-  font-size: 36px;
+  font-family: "Montserrat", Helvetica;
+  font-size: 2.4em;
   font-weight: 500;
-  left: 0;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 0;
-  width: 416px;
+  margin:0;
+  width: 25vw;
 }
 
 .news .image-placeholder {
-  height: 167px;
-  left: 0;
+  height: 10rem;
+  width: 14rem;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 223px;
+  margin-right: 1rem;
 }
 
-.news .div {
-  height: 170px;
-  left: 67px;
-  position: absolute;
-  top: 480px;
-  width: 687px;
-}
-
-.news .img {
-  height: 47px;
-  left: 249px;
-  position: absolute;
-  top: 124px;
-  width: 170px;
-}
-
-.news .text-wrapper-2 {
-  color: #2f2f2f;
-  font-family: "Montserrat-Medium", Helvetica;
-  font-size: 36px;
-  font-weight: 500;
-  left: 244px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 13px;
-  width: 441px;
-}
-
-.news .image-card-2 {
-  height: 167px;
-  left: 815px;
-  position: absolute;
-  top: 239px;
-  width: 657px;
-}
-
-.news .overlap {
-  height: 158px;
-  left: 239px;
-  position: absolute;
-  top: 5px;
-  width: 416px;
-}
-
-.news .image-card-3 {
-  height: 167px;
-  left: 815px;
-  position: absolute;
-  top: 495px;
-  width: 657px;
+.news .image-placeholder2 {
+  height: 10rem;
+  width: 14rem;
+  object-fit: none;
+  margin-right: 1rem;
 }
 
 .community-forum {
@@ -566,261 +505,78 @@
 }
 
 .footer {
-  background-color: #f8f7f7;
-  height: 511px;
-  width: 1680px;
+  background-color: #303030;
+  width: 100%;
+  padding-bottom: 0.1rem;
 }
 
 .footer .overlap {
-  /* background-image: url(./background.svg); */
-  background-size: 100% 100%;
-  height: 511px;
-  position: relative;
-  width: 1678px;
+  display: flex;
+  width: 100%;
+  padding: 1em;
+}
+
+.footer .blocking{
+  vertical-align: middle;
+  margin: auto;
 }
 
 .footer .line {
   background-color: #f8f7f7;
-  height: 5px;
-  left: 32px;
-  position: absolute;
-  top: 397px;
-  width: 1611px;
+  height: 3px;
+  width: 100%;
+}
+
+.footer .libagLogo{
+  height: 20vw;
+}
+
+.footer .headings {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.footer .selection {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align: center;
+}
+.footer .selection1 {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer .conts{
+  height: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  left: 20%;
+}
+
+.footer .iamges{
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
 }
 
 .footer .text-wrapper {
   color: #f8f7f7;
-  font-family: "Montserrat-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 580px;
-  letter-spacing: -0.36px;
-  line-height: 24px;
-  position: absolute;
+  font-family: "Montserrat", Helvetica;
+  font-size: 1.6em;
+  font-weight: 200;
+  margin: 2rem auto ;
   text-align: center;
-  top: 454px;
   white-space: nowrap;
-  width: 520px;
-}
-
-.footer .services {
-  height: 289px;
-  left: 819px;
-  position: absolute;
-  top: 72px;
-  width: 185px;
-}
-
-.footer .overlap-group {
-  height: 170px;
-  left: 12px;
-  position: absolute;
-  top: 119px;
-  width: 152px;
-}
-
-.footer .div {
-  color: #ffffff;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  height: 58px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 112px;
-  width: 152px;
-}
-
-.footer .events {
-  color: #ffffff;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  height: 58px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 57px;
-  width: 152px;
-}
-
-.footer .text-wrapper-2 {
-  color: #ffffff;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  height: 58px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 152px;
-}
-
-.footer .overlap-2 {
-  height: 118px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 175px;
-}
-
-.footer .forms {
-  color: #ffffff;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  height: 58px;
-  left: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 60px;
-  width: 152px;
-}
-
-.footer .text-wrapper-3 {
-  color: #f8f7f7;
-  font-family: "Roboto Slab-Bold", Helvetica;
-  font-size: 32px;
-  font-weight: 700;
-  height: 63px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 175px;
-}
-
-.footer .community {
-  height: 177px;
-  left: 525px;
-  position: absolute;
-  top: 90px;
-  width: 194px;
-}
-
-.footer .feedback {
-  color: #ffffff;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  height: 58px;
-  left: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 119px;
-  width: 152px;
-}
-
-.footer .overlap-3 {
-  height: 118px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 188px;
-}
-
-.footer .text-wrapper-4 {
-  color: #f8f7f7;
-  font-family: "Roboto Slab-Bold", Helvetica;
-  font-size: 32px;
-  font-weight: 700;
-  height: 63px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 188px;
-}
-
-.footer .contacts {
-  height: 241px;
-  left: 1100px;
-  position: absolute;
-  top: 75px;
-  width: 332px;
-}
-
-.footer .insta-logo {
-  height: 60px;
-  left: 122px;
-  object-fit: cover;
-  position: absolute;
-  top: 77px;
-  width: 60px;
-}
-
-.footer .email {
-  height: 60px;
-  left: 187px;
-  object-fit: cover;
-  position: absolute;
-  top: 77px;
-  width: 60px;
-}
-
-.footer .FB-logo {
-  display: block;
-  height: 60px;
-  left: 55px;
-  object-fit: cover;
-  position: absolute;
-  top: 77px;
-  width: 60px;
-}
-
-.footer .address {
-  color: #ffffff;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  height: 58px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 183px;
-  width: 328px;
-}
-
-.footer .text-wrapper-5 {
-  color: #f8f7f7;
-  font-family: "Roboto Slab-Bold", Helvetica;
-  font-size: 32px;
-  font-weight: 700;
-  height: 63px;
-  left: 45px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 212px;
-}
-
-.footer .littlebaguio-logo-white-1 {
-  background-image: unset !important;
-  background-position: unset !important;
-  background-size: unset !important;
-  height: 339px !important;
-  left: 49px !important;
-  position: absolute !important;
-  top: 33px !important;
-  width: 390px !important;
+  width: 100%;
 }

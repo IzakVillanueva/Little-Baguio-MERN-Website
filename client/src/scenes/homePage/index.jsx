@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import Navbar from "scenes/navbar";
+import { useNavigate } from "react-router-dom";
 import './home.css';
 
 
@@ -32,44 +33,55 @@ const HomePage = () => {
             <section> {/* NEWS */} 
               <News />
             </section>
+
+            <section> {/* FOOTER */} 
+              <Footer />
+            </section>
         </Box>
     );
 };
 
 export const News = () => {
+  const navigate = useNavigate();
     return (
       <div className="news">
-        <div className="news-updates">News &amp; Updates</div>
+        <button onClick={() => navigate("/news")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
+          <div className="news-updates">News &amp; Updates</div>
+        </button>
         <div className="newsFirstRow">
           <div className="image-card">
-            <div className="overlap-group">
-              <img className="button" alt="Button" src="button.svg" />
+            <img className="image-placeholder" alt="Image placeholder" src="../../../../assets/samplenewsimage1.jpg" />
+            <div className="overlap">
               <p className="text-wrapper">Fiesta in Barangay Little Baguio</p>
+              <img className="button" alt="Button" src="../../../../assets/ButtonLM.png" />
             </div>
-            <img className="image-placeholder" alt="Image placeholder" src="image-placeholder.png" />
           </div>
-          <div className="div">
-            <img className="img" alt="Button" src="image.svg" />
-            <img className="image-placeholder" alt="Image placeholder" src="image.png" />
-            <div className="text-wrapper-2">BIDA Program Anniversary Celebration</div>
+
+          <div className="image-card">
+            <img className="image-placeholder" alt="Image placeholder" src="../../../../assets/samplenewsimage2.jpg" />
+            <div className="overlap">
+              <p className="text-wrapper">San Juan Para Games 2024</p>
+              <img className="button" alt="Button" src="../../../../assets/ButtonLM.png" />
+            </div>
           </div>
         </div>
-        <div className="image-card-2">
-          <div className="overlap">
-            <img className="button" alt="Button" src="button-2.svg" />
-            <p className="text-wrapper">San Juan Para Games 2024</p>
+
+        <div className="newsFirstRow">
+          <div className="image-card">
+            <img className="image-placeholder" alt="Image placeholder" src="../../../../assets/samplenewsimage3.jpg" />
+            <div className="overlap">
+              <p className="text-wrapper">BIDA Program Anniversary Celebration</p>
+              <img className="button" alt="Button" src="../../../../assets/ButtonLM.png" />
+            </div>
           </div>
-          <img className="image-placeholder" alt="Image placeholder" src="image-placeholder-2.png" />
-        </div>
-        <div className="image-card-3">
-          <div className="overlap">
-            <img className="button" alt="Button" src="button-3.svg" />
-            <p className="text-wrapper">
-              Ermitaño Creek <br />
-              Clean Up Operation
-            </p>
+
+          <div className="image-card">
+            <img className="image-placeholder2" alt="Image placeholder" src="../../../../assets/samplenewsimage4.png" />
+            <div className="overlap">
+              <p className="text-wrapper">Ermitaño Creek Clean Up Operation</p>
+              <img className="button" alt="Button" src="../../../../assets/ButtonLM.png" />
+            </div>
           </div>
-          <img className="image-placeholder" alt="Image placeholder" src="image-placeholder-3.png" />
         </div>
       </div>
     );
@@ -217,37 +229,38 @@ export const News = () => {
     return (
       <div className="footer">
         <div className="overlap">
-          <div className="line" />
-          <div className="text-wrapper">© Little Baguio 2024</div>
-          <div className="services">
-            <div className="overlap-group">
-              <div className="div">Resources</div>
-              <div className="events">Directory</div>
-              <div className="text-wrapper-2">Feedback</div>
-            </div>
-            <div className="overlap-2">
-              <div className="forms">Requests</div>
-              <div className="text-wrapper-3">Services</div>
-            </div>
+          <div className="blocking">
+            <img className="libagLogo" alt="Libaglogo" src="../../../../assets/LittleBaguio Logo (White) 1.png" />
           </div>
-          <div className="community">
-            <div className="feedback">Forum</div>
-            <div className="overlap-3">
-              <div className="forms">News</div>
-              <div className="text-wrapper-4">Community</div>
+
+          <div className="blocking">
+            <p className="headings">Community</p>
+            <p className="selection">News</p>
+            <p className="selection">Forum</p>
+          </div>
+
+          <div className="blocking">
+            <p className="headings">Services</p>
+            <p className="selection">Requests</p>
+            <p className="selection">Feedback</p>
+            <p className="selection">Directory</p>
+            <p className="selection">Resources</p>
+          </div>
+
+          <div className="blocking">
+            <p className="headings">Contact Us</p>
+            <div className="iamges">
+              <img className="conts" alt="Libaglogo" src="../../../../assets/Email 1.png" />
+              <img className="conts" alt="Libaglogo" src="../../../../assets/FB Logo 1.png" />
+              <img className="conts" alt="Libaglogo" src="../../../../assets/Insta Logo 1.png" />
             </div>
+            <p className="selection1">Jose Abad Santos cor. Gen.</p>
+            <p className="selection1">Gutierrez St., Little Baguio,</p>
+            <p className="selection1">San Juan, Philippines</p>
           </div>
-          <div className="contacts">
-            <img className="insta-logo" alt="Insta logo" src="insta-logo-1.png" />
-            <img className="email" alt="Email" src="email-1.png" />
-            <a href="https://www.facebook.com/littlebaguio" rel="noopener noreferrer" target="_blank">
-              <img className="FB-logo" alt="Fb logo" src="FB-logo-1.png" />
-            </a>
-            <p className="address">Jose Abad Santos cor. Gen. Gutierrez St., Little Baguio, San Juan, Philippines</p>
-            <div className="text-wrapper-5">Contact Us</div>
-          </div>
-          {/*<LittlebaguioLogo className="littlebaguio-logo-white-1" />*/}
         </div>
+        <div className="line" />
+        <div className="text-wrapper">© Little Baguio 2024</div>
       </div>
     );
   };
