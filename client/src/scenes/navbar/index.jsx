@@ -91,8 +91,8 @@ const Navbar = () => {
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap="2rem">
-          <IconButton onClick={() => dispatch(setMode())}> {/*BUTTON FOR LIGHT/DARK MODE*/}
-            {theme.palette.mode === "dark" ? (
+          {/* <IconButton onClick={() => dispatch(setMode())}> BUTTON FOR LIGHT/DARK MODE */}
+            {/* {theme.palette.mode === "dark" ? (
               <DarkMode sx={{ fontSize: "25px" }} />
             ) : (
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
@@ -100,7 +100,7 @@ const Navbar = () => {
           </IconButton>
           <Message sx={{ fontSize: "25px" }} />
           <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} />
+          <Help sx={{ fontSize: "25px" }} /> */}
           {isLoggedOut ? (
             <div style={{ height: '50%' }}>
               <button className="loginBut" onClick={() => navigate("/login")} style={{cursor: 'pointer'}}>
@@ -172,7 +172,7 @@ const Navbar = () => {
             alignItems="center"
             gap="3rem"
           >
-            <IconButton
+            {/* <IconButton
               onClick={() => dispatch(setMode())}
               sx={{ fontSize: "25px" }}
             >
@@ -184,7 +184,7 @@ const Navbar = () => {
             </IconButton>
             <Message sx={{ fontSize: "25px" }} />
             <Notifications sx={{ fontSize: "25px" }} />
-            <Help sx={{ fontSize: "25px" }} />
+            <Help sx={{ fontSize: "25px" }} /> */}
             <FormControl variant="standard" value={username}>
               <Select
                 value={username}
