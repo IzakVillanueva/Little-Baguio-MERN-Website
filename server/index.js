@@ -20,13 +20,13 @@ import { users, posts } from "./data/index.js";
 
 /* CONFIGURATIONS */
 const app = express();
-app.use(cors(
-    {
-        origin:["https://littlebaguio.vercel.app"],
-        methods: ["POST", "GET", "OPTIONS", "PUT", "DELETE"],
-        credentials: true
-    }
-));
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://littlebaguio.vercel.app");
+    res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+  
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config();
