@@ -75,6 +75,7 @@ const Form = () => {
 
   const login = async (values, onSubmitProps) => {
     const loggedInResponse = await fetch("https://littlebaguio-api.vercel.app/auth/login", {
+      mode: 'no-cors',
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
