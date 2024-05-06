@@ -17,25 +17,22 @@ const HomePage = () => {
                 </div>
             </section>
             
-            <section>
-            <div className="about">
-                <img className="image-placeholder" alt="Image placeholder" src="image-placeholder.png" />
-                <div className="text-wrapper">What is Little Baguio?</div>
-                <p className="div">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum.</p>
-            </div>
+            <section> {/* ABOUT */}
+              <div className="about">
+                <div className="aboutText">
+                  <div className="text-wrapper">What is Little Baguio?</div>
+                  <p className="div">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum.</p>
+                </div>
+                <div className="aboutPic">
+                  <img className="image-placeholder" alt="RED PEOPLE" src="../../../../assets/redpeople.jpg" />
+                </div>
+              </div>
+            </section>
+
+            <section> {/* NEWS */} 
+              <News />
             </section>
         </Box>
-    );
-};
-
-
-export const About = () => {
-    return (
-        <div className="about">
-            <img className="image-placeholder" alt="Image placeholder" src="image-placeholder.png" />
-            <div className="text-wrapper">What is Little Baguio?</div>
-            <p className="div">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum.</p>
-        </div>
     );
 };
 
@@ -43,17 +40,19 @@ export const News = () => {
     return (
       <div className="news">
         <div className="news-updates">News &amp; Updates</div>
-        <div className="image-card">
-          <div className="overlap-group">
-            <img className="button" alt="Button" src="button.svg" />
-            <p className="text-wrapper">Fiesta in Barangay Little Baguio</p>
+        <div className="newsFirstRow">
+          <div className="image-card">
+            <div className="overlap-group">
+              <img className="button" alt="Button" src="button.svg" />
+              <p className="text-wrapper">Fiesta in Barangay Little Baguio</p>
+            </div>
+            <img className="image-placeholder" alt="Image placeholder" src="image-placeholder.png" />
           </div>
-          <img className="image-placeholder" alt="Image placeholder" src="image-placeholder.png" />
-        </div>
-        <div className="div">
-          <img className="img" alt="Button" src="image.svg" />
-          <img className="image-placeholder" alt="Image placeholder" src="image.png" />
-          <div className="text-wrapper-2">BIDA Program Anniversary Celebration</div>
+          <div className="div">
+            <img className="img" alt="Button" src="image.svg" />
+            <img className="image-placeholder" alt="Image placeholder" src="image.png" />
+            <div className="text-wrapper-2">BIDA Program Anniversary Celebration</div>
+          </div>
         </div>
         <div className="image-card-2">
           <div className="overlap">
