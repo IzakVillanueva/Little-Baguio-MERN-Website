@@ -226,6 +226,7 @@ export const News = () => {
   };
 
   export const Footer = () => {
+    const navigate = useNavigate();
     return (
       <div className="footer">
         <div className="overlap">
@@ -235,7 +236,7 @@ export const News = () => {
 
           <div className="blocking">
             <p className="headings">Community</p>
-            <p className="selection">News</p>
+            <p className="selection" onClick={() => navigate("/news")} style={{ cursor: 'pointer'}}>News</p>
             <p className="selection">Forum</p>
           </div>
 
