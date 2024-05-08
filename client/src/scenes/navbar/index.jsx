@@ -9,6 +9,7 @@ import {
   FormControl,
   useTheme,
   useMediaQuery,
+  InputLabel,
 } from "@mui/material";
 import {
   Search,
@@ -79,11 +80,33 @@ const Navbar = () => {
               </button>
             </div>
             {/* Services */}
-            <div className="servicesBut" style={{ height: '50%' }}>
-              <button onClick={() => navigate("/home")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
-                  <h2>Services</h2>
-              </button>
-            </div>
+            <FormControl fullWidth size="normal">
+                <InputLabel id="services-text"
+                  sx={{
+                    fontFamily: "Montserrat",
+                    fontSize: "1.41em",
+                  }}>Services</InputLabel>
+                <Select 
+                  labelId="services-text" 
+                  sx={{
+                    m:"auto",
+                    width: "200px",
+                    fontFamily: "Montserrat",
+                    fontSize: "1.41em",
+                    "& .MuiSelect-select:focus": {
+                      backgroundColor: neutralLight,
+                    },
+                  }}
+                  input={<InputBase />}
+                >
+                    <MenuItem value="Services" onClick={() => navigate("/home")}>
+                      <Typography>Services</Typography>
+                    </MenuItem>
+                    <MenuItem value="Resources" onClick={() => navigate("/home")}>
+                      <Typography>Resources</Typography>
+                    </MenuItem>
+                  </Select>
+              </FormControl>
           </div>
           </FlexBetween>
         )}
