@@ -50,6 +50,7 @@ export const login = async (req, res) => {
         delete user.password;
         res.status(200).json({ token, user });
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        console.error(err.message); // Log the error message
+        res.status(500).json({ error: err.message }); // Include the error message in the response
     }
 };
