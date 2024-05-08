@@ -47,8 +47,13 @@
 .about .image-placeholder{
     height:30vw;
     object-fit: cover;
-    top: 139px;
     margin: 3rem 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about{
+    display: block;
+  }
 }
 
 .about .text-wrapper {

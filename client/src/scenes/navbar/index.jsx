@@ -49,8 +49,8 @@ const Navbar = () => {
   }
 
   return (
-    <FlexBetween padding="1rem 6% 1rem 2%" backgroundColor={alt}>
-      <FlexBetween gap="1.75rem">
+    <FlexBetween padding="1rem 6% 1rem 2%" backgroundColor={alt} >
+      <FlexBetween gap="5rem">
         <div style={{ display: 'flex'}}>
           {/* LOGO */}
           <FlexBetween gap="1.75rem">
@@ -62,7 +62,9 @@ const Navbar = () => {
             </button>
           </div>
           </FlexBetween>
-          <FlexBetween gap="3rem">
+        </div>
+        {isNonMobileScreens && (
+          <FlexBetween>
           <div style={{ display: 'flex'}}>
             {/* Home */}
             <div className="homeBut" style={{ height: '50%' }}>
@@ -84,23 +86,12 @@ const Navbar = () => {
             </div>
           </div>
           </FlexBetween>
-          
-        </div>
+        )}
       </FlexBetween>
 
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap="2rem">
-          {/* <IconButton onClick={() => dispatch(setMode())}> BUTTON FOR LIGHT/DARK MODE */}
-            {/* {theme.palette.mode === "dark" ? (
-              <DarkMode sx={{ fontSize: "25px" }} />
-            ) : (
-              <LightMode sx={{ color: dark, fontSize: "25px" }} />
-            )}
-          </IconButton>
-          <Message sx={{ fontSize: "25px" }} />
-          <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} /> */}
           {isLoggedOut ? (
             <div style={{ height: '50%' }}>
               <button className="loginBut" onClick={() => navigate("/login")} style={{cursor: 'pointer'}}>
@@ -108,6 +99,7 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
+            
             <FormControl variant="standard" value={username}> {/* DROPDOWN SHOW USER */}
               <Select
                 value={username}
@@ -185,6 +177,9 @@ const Navbar = () => {
             <Message sx={{ fontSize: "25px" }} />
             <Notifications sx={{ fontSize: "25px" }} />
             <Help sx={{ fontSize: "25px" }} /> */}
+            <Typography onClick={() => navigate("/home")} style={{cursor: 'pointer'}}>Home</Typography>
+            <Typography onClick={() => navigate("/news")} style={{cursor: 'pointer'}}>Community</Typography>
+            <Typography onClick={() => navigate("/home")}style={{cursor: 'pointer'}}>Services</Typography>
             <FormControl variant="standard" value={username}>
               <Select
                 value={username}
