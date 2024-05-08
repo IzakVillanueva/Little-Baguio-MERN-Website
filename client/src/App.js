@@ -1,8 +1,9 @@
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import HomePage from "scenes/homePage";
 import LoginPage from "scenes/loginPage";
-import ProfilePage from "scenes/profilePage";
 import NewsPage from "scenes/newsPage";
+import ServicePage from "scenes/servicePage";
+import ResourcePage from "scenes/resourcePage";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -36,20 +37,14 @@ function App() {
               path="/news" 
               element={isAuth ? <NewsPage /> : <Navigate to="/login" />} 
             />
-            <Route
-              path="/profile/:userId"
-              element={isAuth ? <ProfilePage /> : <Navigate to="/home" />}
+            <Route 
+              path="/services" 
+              element={<ServicePage />} 
             />
-
-            {/* <Route path="/" element={<LoginPage />} />    //ORIGINAL
-            <Route
-              path="/home"
-              element={isAuth ? <HomePage /> : <Navigate to="/" />}
+            <Route 
+              path="/resources" 
+              element={<ResourcePage />} 
             />
-            <Route
-              path="/profile/:userId"
-              element={isAuth ? <ProfilePage /> : <Navigate to="/" />}
-            /> */}
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
