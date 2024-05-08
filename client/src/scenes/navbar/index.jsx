@@ -99,16 +99,16 @@ const Navbar = () => {
                   }}
                   input={<InputBase />}
                 >
-                    <MenuItem value="Services" onClick={() => navigate("/services")}>
-                      <Typography>Services</Typography>
-                    </MenuItem>
-                    <MenuItem value="News" onClick={() => navigate("/news")}>
-                      <Typography>News</Typography>
-                    </MenuItem>
-                    <MenuItem value="Resources" onClick={() => navigate("/resources")}>
-                      <Typography>Resources</Typography>
-                    </MenuItem>
-                  </Select>
+                  <MenuItem value="Services" onClick={() => navigate("/services")}>
+                    <Typography>Services</Typography>
+                  </MenuItem>
+                  <MenuItem value="News" onClick={() => navigate("/news")}>
+                    <Typography>News</Typography>
+                  </MenuItem>
+                  <MenuItem value="Resources" onClick={() => navigate("/resources")}>
+                    <Typography>Resources</Typography>
+                  </MenuItem>
+                </Select>
               </FormControl>
           </div>
           </FlexBetween>
