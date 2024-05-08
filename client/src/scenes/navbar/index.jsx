@@ -99,10 +99,13 @@ const Navbar = () => {
                   }}
                   input={<InputBase />}
                 >
-                    <MenuItem value="Services" onClick={() => navigate("/home")}>
+                    <MenuItem value="Services" onClick={() => navigate("/services")}>
                       <Typography>Services</Typography>
                     </MenuItem>
-                    <MenuItem value="Resources" onClick={() => navigate("/home")}>
+                    <MenuItem value="News" onClick={() => navigate("/news")}>
+                      <Typography>News</Typography>
+                    </MenuItem>
+                    <MenuItem value="Resources" onClick={() => navigate("/resources")}>
                       <Typography>Resources</Typography>
                     </MenuItem>
                   </Select>
@@ -110,8 +113,8 @@ const Navbar = () => {
           </div>
           </FlexBetween>
         )}
+        
       </FlexBetween>
-
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap="2rem">

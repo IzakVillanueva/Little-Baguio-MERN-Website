@@ -27,4 +27,8 @@ h3{
 .MuiBox-root > div {
     margin: 0;
 }
+.extra-space {
+    flex: 1; /* Fill up remaining space */
+    margin: 10px;
+}
   
