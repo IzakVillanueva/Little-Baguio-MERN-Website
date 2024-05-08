@@ -45,7 +45,7 @@ export const News = () => {
   const navigate = useNavigate();
     return (
       <div className="news">
-        <button onClick={() => navigate("/news")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
+        <button className="newsBut" onClick={() => navigate("/news")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
           <div className="news-updates">News &amp; Updates</div>
         </button>
         <div className="newsFirstRow">

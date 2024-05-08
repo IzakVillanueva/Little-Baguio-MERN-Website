@@ -42,6 +42,7 @@
 .aboutText {
   margin:auto;
   margin-top: 10rem;
+  margin-left: 2rem;
 }
 
 .about .image-placeholder{
@@ -50,34 +51,54 @@
     margin: 3rem 2rem;
 }
 
-@media only screen and (max-width: 1200px) {
-  .about{
-    display: block;
-  }
-}
-
 .about .text-wrapper {
     color: #2f2f2f;
     font-family: "Roboto Slab-Bold", Helvetica;
     font-size: 3em;
     font-weight: 700;
-    left: 90px;
     letter-spacing: 0; 
     line-height: normal;
     top: 4rem;
-    width: 507px;
 }
 
-.about .div{
-    color: #2f2f2f;
-    font-family: "Montserrat", Helvetica;
-    font-size: 2em;
-    font-weight: 300;
-    left: 95px;
-    letter-spacing: 0; 
-    line-height: normal;
-    top: 2rem;
-    width: 682px;
+.about p {
+  font-size: 2em;
+  font-weight: 200;
+  font-family: "Montserrat", Helvetica;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Optionally set the width */
+    height: 100%; /* Optionally set the height */
+  }
+  .aboutText{
+    margin: auto;
+    width: auto;
+    margin-left: 1rem;
+  }
+  .aboutPic{
+    margin: auto;
+    width: auto;
+  }
+  .about .image-placeholder{
+    height:30vw;
+    object-fit: cover;
+    margin: auto;
+  }
+  .about .text-wrapper{
+    font-size: 2rem;
+  }
+  .about p{
+    font-size: 1em;
+  }
+  .about .image-placeholder{
+    height:30vw;
+    object-fit: cover;
+  }
 }
 
 .news {
@@ -136,6 +157,53 @@
   width: 14rem;
   object-fit: none;
   margin-right: 1rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .news {
+    background-color: #baf0fc;
+    position: relative;
+    width: 100%;
+    padding: 1.3rem 2rem;
+  }
+  .news-updates{
+    font-size: 3em;
+    
+  }
+  .news .newsBut {
+    margin: auto;
+    display: flex;
+  }
+  .news .image-card {
+    display: flex;
+    width: 50vw;
+    max-width: 50vw;
+  }
+  .news .image-placeholder {
+    height: 10vw;
+    width: 14vw;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  .news .image-placeholder2 {
+    height: 10vw;
+    width: 14vw;
+    object-fit: none;
+    margin-right: 1rem;
+  }
+  .news .text-wrapper {
+    color: #2f2f2f;
+    font-family: "Montserrat", Helvetica;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  .news .button {
+    object-fit: cover;
+    height: 2rem;
+    margin: auto;
+  }
 }
 
 .community-forum {
