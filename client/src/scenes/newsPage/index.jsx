@@ -33,11 +33,12 @@ const NewsPage = () => {
             justifyContent="center"
             alignItems="center"
             margin="auto"
+            display="flex"
         >
             <Box
                 width={isNonMobileScreens ? "60vw" : "100vw"}
                 maxWidth="800px"
-                m="auto"
+                margin="auto"
             >
                 {isAdmin && (
                     <>

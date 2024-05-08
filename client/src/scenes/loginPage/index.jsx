@@ -9,25 +9,23 @@ const LoginPage = () => {
   return (
     <Box>
       <Navbar />
-      <Box 
-        width={isNonMobileScreens ? "50%" : "93%"}
-        p="1rem 0px 0px 0px"
-        m="0px auto"
-        backgroundColor={theme.palette.background.alt}
-      >
-        <img src="../../../../assets/LB Logo (Dark).png" alt="logo" className="logo"/>
-      </Box>
-        {/* FORM BOX */}
-      <Box 
-        width={isNonMobileScreens ? "50%" : "93%"}
-        p="2rem"
-        m="0px auto"
-        backgroundColor={theme.palette.background.alt}
-      >
-        <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
-          A paradise like Baguio in Metro Manila
-        </Typography>
-        <Form />
+      <Box display="flex" alignItems="center" justifyContent="center">
+        <Box 
+          width={isNonMobileScreens ? "50%" : "100%"}
+          p="2rem 0px 0px 0px"
+          m="0px auto"
+          backgroundColor={theme.palette.background.alt}
+          alignItems="center" justifyContent="center"
+        >
+          <img src="../../../../assets/LB Logo (Dark).png" alt="logo" className="logo"/>
+          <Box p="1rem 2rem 0 2rem">
+            <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
+              A paradise like Baguio in Metro Manila
+            </Typography>
+            {/* FORM BOX */}
+            <Form />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
