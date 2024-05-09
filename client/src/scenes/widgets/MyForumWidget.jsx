@@ -31,6 +31,7 @@ import {
     // const user = useSelector((state) => state.user);
     // const _id = user ? user._id : null;
     const token = useSelector((state) => state.token);
+    const replyText = useSelector((state) => state.replyText);
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
     const mediumMain = palette.neutral.mediumMain;
     const medium = palette.neutral.medium;
@@ -72,6 +73,11 @@ import {
             }}
           />
         </FlexBetween> */}
+        <FlexBetween gap="1.5rem">
+          <Box>
+            {replyText && <Typography>{replyText}</Typography>}
+          </Box>
+        </FlexBetween>
         <FlexBetween gap="1.5rem">
           <InputBase
             placeholder="Add description of the news or updates..."
