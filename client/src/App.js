@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
+import ForumPage from "scenes/forumPage";
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -36,6 +37,10 @@ function App() {
             <Route 
               path="/news" 
               element={isAuth ? <NewsPage /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/forums" 
+              element={isAuth ? <ForumPage /> : <Navigate to="/login" />} 
             />
             <Route 
               path="/services" 
