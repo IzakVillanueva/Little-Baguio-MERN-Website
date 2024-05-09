@@ -8,10 +8,10 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`https://littlebaguio-api.vercel.app/assets/${image}`}
+        src={`http://localhost:3001/assets/${image}`} 
       />
     </Box>
   );
 };
-
+/* https://littlebaguio-api.vercel.app */
 export default UserImage;
