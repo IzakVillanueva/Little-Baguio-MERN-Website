@@ -1,7 +1,7 @@
 import {
     ChatBubbleOutlineOutlined,
     FavoriteBorderOutlined,
-    ReplyOutlinedIcon,
+    ReplyOutlined,
     ShareOutlined,
   } from "@mui/icons-material";
   import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
@@ -64,7 +64,7 @@ import {
           <FlexBetween gap="1rem">  
             <FlexBetween gap="0.3rem">
               <IconButton onClick={() => handleReply(name, description)}>
-                <ReplyOutlinedIcon />
+                <ReplyOutlined />
               </IconButton>
             </FlexBetween>
           </FlexBetween> 
