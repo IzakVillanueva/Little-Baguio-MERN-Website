@@ -39,8 +39,18 @@ export const authSlice = createSlice({
         });
         state.posts = updatedPosts;
       },
+      setForums: (state, action) => {
+        state.forums = action.payload.forums;
+      },
+      setForum: (state, action) => {
+        const updatedForums = state.forums.map((forum) => {
+          if (forum._id === action.payload.forum._id) return action.payload.forum;
+          return forum;
+        });
+        state.forums = updatedForums;
+      },
     },
 });
 
-export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } = authSlice.actions;
+export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost, setForums, setForum } = authSlice.actions;
 export default authSlice.reducer;
