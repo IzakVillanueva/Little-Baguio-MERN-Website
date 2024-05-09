@@ -75,7 +75,7 @@ const Navbar = () => {
             </div>
             {/* Community */}
             <div className="commBut" style={{ height: '50%' }}>
-              <button onClick={() => navigate("/home")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
+              <button onClick={() => navigate("/forums")} style={{ border: 'none', background: 'none', cursor: 'pointer'}}>
                   <h2>Community</h2>
               </button>
             </div>
