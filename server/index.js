@@ -18,12 +18,13 @@ import { createForum } from "./controllers/forums.js";
 import { verifyToken } from "./middleware/auth.js";
 import User from "./models/User.js";
 import Post from "./models/Post.js";
-import { users, posts } from "./data/index.js";
+import Forum from "./models/Forum.js"
+import { forums } from "./data/index.js";
 
 /* CONFIGURATIONS */
 const app = express();
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://littlebaguio.vercel.app");
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // https://littlebaguio.vercel.app
     res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE, PATCH");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     next();
@@ -76,5 +77,6 @@ mongoose
     /* ADD DATA ONE TIME */
     //User.insertMany(users);
     //Post.insertMany(posts);
+    //Forum.insertMany(forums);
 })
 .catch((error) => console.log(`${error} did not connect`));
