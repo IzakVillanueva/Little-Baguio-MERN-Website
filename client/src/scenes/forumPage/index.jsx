@@ -1,6 +1,7 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 import Navbar from "scenes/navbar";
+import ForumWidget from "scenes/widgets/ForumWidget";
 import MyForumWidget from "scenes/widgets/MyForumWidget";
 
 const ForumPage = () => {
@@ -33,7 +34,7 @@ const ForumPage = () => {
                 margin="auto"
             >
                 <MyForumWidget picturePath={picturePath} />
-                {/* <PostsWidget userId={_id} /> */}
+                <ForumWidget userId={_id} /> 
             </Box>
             
         </Box>
