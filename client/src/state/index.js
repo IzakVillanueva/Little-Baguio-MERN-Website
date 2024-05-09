@@ -53,6 +53,8 @@ export const authSlice = createSlice({
       },
       addReply: (state, action) => {
         state.replyText = action.payload;
+        state.username = action.payload.username;
+        state.description = action.payload.description;
       },
     },
 });
