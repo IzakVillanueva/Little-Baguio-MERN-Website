@@ -5,6 +5,8 @@ const initialState = {
     user: null,
     token: null,
     posts: [],
+    forums: [],
+    replyText: '',
 };
 
 export const authSlice = createSlice({
@@ -49,8 +51,11 @@ export const authSlice = createSlice({
         });
         state.forums = updatedForums;
       },
+      addReply: (state, action) => {
+        state.replyText = action.payload;
+      },
     },
 });
 
-export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost, setForums, setForum } = authSlice.actions;
+export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost, setForums, setForum, addReply } = authSlice.actions;
 export default authSlice.reducer;
