@@ -30,14 +30,6 @@ export const authSlice = createSlice({
         }
       },
       setPosts: (state, action) => {
-        //  Check if the payload contains an array under the 'posts' key
-        // if (Array.isArray(action.payload.posts)) {
-        //   state.posts = action.payload.posts;
-        // } else {
-        //    If not, default to an empty array
-        //   state.posts = [];
-        //   console.error('Expected an array of posts, but received:', action.payload.posts);
-        // }
         state.posts = action.payload.posts;
       },
       setPost: (state, action) => {
