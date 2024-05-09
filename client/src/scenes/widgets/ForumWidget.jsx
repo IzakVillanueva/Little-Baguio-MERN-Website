@@ -36,7 +36,7 @@ import {
 
     const handleReply = (username, description) => {
         const replyText = `Replying to ${username}'s post, ${description}`;
-        dispatch(addReply(replyText));
+        dispatch(addReply({ replyText, username, description }));
     }
   
     return (
