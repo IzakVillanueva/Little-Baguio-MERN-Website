@@ -24,7 +24,7 @@ import {
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
     const [image, setImage] = useState(null);
-    const [title, setTitle] = useState(""); // ibahin yung setTitle
+    //const [title, setTitle] = useState(""); // ibahin yung setTitle
     const [forum, setForum] = useState("");
     const { palette } = useTheme();
     const { _id } = useSelector((state) => state.user);
@@ -38,7 +38,7 @@ import {
     const handleForum = async () => {
       const formData = new FormData();
       formData.append("userId", _id);
-      formData.append("description", forum);
+      formData.append("description", forum); // add replies
       if (image) {
         formData.append("picture", image);
         formData.append("picturePath", image.name);
@@ -53,12 +53,12 @@ import {
       dispatch(setForums({ forums }));
       setImage(null);
       setForum("");
-      setTitle(""); // ibahin yung setTitle
+      //setTitle(""); // ibahin yung setTitle
     };
   
     return (
       <WidgetWrapper>
-        <FlexBetween gap="1.5rem">
+        {/* <FlexBetween gap="1.5rem">
           <InputBase
             placeholder="State your title"
             onChange={(e) => setTitle(e.target.value)} // ibahin yung setTitle
@@ -71,7 +71,7 @@ import {
               marginBottom: "1rem",
             }}
           />
-        </FlexBetween>
+        </FlexBetween> */}
         <FlexBetween gap="1.5rem">
           <InputBase
             placeholder="Add description of the news or updates..."
