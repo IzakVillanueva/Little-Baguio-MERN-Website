@@ -4,12 +4,12 @@ import LoginPage from "scenes/loginPage";
 import NewsPage from "scenes/newsPage";
 import ServicePage from "scenes/servicePage";
 import ResourcePage from "scenes/resourcePage";
+import ForumPage from "scenes/forumPage";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
-import ForumPage from "scenes/forumPage";
 
 function App() {
   const mode = useSelector((state) => state.mode);
