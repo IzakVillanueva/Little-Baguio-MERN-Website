@@ -6,6 +6,8 @@ const initialState = {
     token: null,
     posts: [],
     forums: [],
+    username: '',
+    description: '',
     replyText: '',
 };
 
@@ -52,9 +54,10 @@ export const authSlice = createSlice({
         state.forums = updatedForums;
       },
       addReply: (state, action) => {
-        state.replyText = action.payload;
-        state.username = action.payload.username;
-        state.description = action.payload.description;
+        const { replyText, username, description } = action.payload;
+        state.replyText = replyText;
+        state.username = username;
+        state.description = description;
       },
     },
 });

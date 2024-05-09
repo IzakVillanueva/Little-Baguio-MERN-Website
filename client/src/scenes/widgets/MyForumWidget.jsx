@@ -24,14 +24,13 @@ import {
     const dispatch = useDispatch();
     const [isImage, setIsImage] = useState(false);
     const [image, setImage] = useState(null);
-    //const [title, setTitle] = useState(""); // ibahin yung setTitle
     const [forum, setForum] = useState("");
     const { palette } = useTheme();
     const { _id } = useSelector((state) => state.user);
-    // const user = useSelector((state) => state.user);
-    // const _id = user ? user._id : null;
     const token = useSelector((state) => state.token);
-    const replyText = useSelector((state) => state.replyText);
+    const replyText = useSelector(state => state.replyText);
+    const username = useSelector(state => state.username);
+    const description = useSelector(state => state.description);
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
     const mediumMain = palette.neutral.mediumMain;
     const medium = palette.neutral.medium;
@@ -44,6 +43,10 @@ import {
         formData.append("picture", image);
         formData.append("picturePath", image.name);
       }
+      if (username) {
+        formData.append("replyUser", username);
+        formData.append("replyDescription", description);
+      }
   
       const response = await fetch(`http://localhost:3001/forums`, {
         method: "POST",
@@ -54,33 +57,18 @@ import {
       dispatch(setForums({ forums }));
       setImage(null);
       setForum("");
-      //setTitle(""); // ibahin yung setTitle
     };
   
     return (
       <WidgetWrapper>
-        {/* <FlexBetween gap="1.5rem">
-          <InputBase
-            placeholder="State your title"
-            onChange={(e) => setTitle(e.target.value)} // ibahin yung setTitle
-            value={title}
-            sx={{
-              width: "100%",
-              backgroundColor: palette.neutral.light,
-              borderRadius: "2rem",
-              padding: "0.3rem 2rem",
-              marginBottom: "1rem",
-            }}
-          />
-        </FlexBetween> */}
         <FlexBetween gap="1.5rem">
           <Box>
-            {replyText && <Typography>{replyText}</Typography>}
+            {replyText && <Typography value="reply">{replyText}</Typography>}
           </Box>
         </FlexBetween>
         <FlexBetween gap="1.5rem">
           <InputBase
-            placeholder="Add description of the news or updates..."
+            placeholder="Post in the forum or reply to one..."
             onChange={(e) => setForum(e.target.value)}
             value={forum}
             sx={{
