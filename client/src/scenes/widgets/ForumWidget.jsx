@@ -28,6 +28,12 @@ import {
     const main = palette.neutral.main;
     const primary = palette.primary.main;
 
+    const displayReplyText = replyUser? (
+      <Typography color="#8F8F8F" backgroundColor="#F5F5F5" borderRadius="3em" p="0.1em 0.1em 0.1em 0.3em">
+        --Replying to {replyUser}'s post, {replyDescription}
+      </Typography>
+    ) : null;
+
     const handleReply = (username, description) => {
         const replyText = `Replying to ${username}'s post, ${description}`;
         dispatch(addReply(replyText));
@@ -48,7 +54,13 @@ import {
           fontSize: "1.7em" }}>
           {title}
         </Typography> */}
-        <Typography color={main} sx={{ mt: "1rem" }}>
+        <Typography color="#4EAE8A" fontWeight="700" fontSize="1.2em">
+          {name}
+        </Typography>
+        <Box marginLeft="10px">
+          {displayReplyText}
+        </Box>
+        <Typography color="#313131" sx={{ mt: "1rem" }}>
           {description}
         </Typography>
         {picturePath && (
