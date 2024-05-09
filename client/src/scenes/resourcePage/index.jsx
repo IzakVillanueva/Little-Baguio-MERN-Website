@@ -177,6 +177,9 @@ const ResourcePage = () => {
                         <TextField value={value} 
                             onChange={(e)=>setValue(e.target.value)}
                             backgroundColor="#fff"/>
+                            <TextField value={value} 
+                            onChange={(e)=>setValue(e.target.value)}
+                            backgroundColor="#fff"/>
                         <Button type="submit" onClick={handleSubmit} m="auto">
                             Submit
                         </Button>
