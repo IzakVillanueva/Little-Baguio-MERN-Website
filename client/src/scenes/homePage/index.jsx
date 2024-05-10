@@ -34,7 +34,7 @@ const HomePage = () => {
               <News />
             </section>
             <section>
-              
+              <ServiceRequest/>
             </section>
             <section> {/* FOOTER */} 
               <Footer />
@@ -188,44 +188,16 @@ export const News = () => {
   };
 
   export const ServiceRequest = () => {
+    const navigate = useNavigate();
     return (
       <div className="service-request">
-        <div className="overlap">
-          <div className="overlap-group">
-            <p className="text-wrapper">Fill out this form to request our services</p>
-            <p className="div">Having a Bit of Trouble?</p>
-          </div>
-          <div className="forms">
-            <img className="button" alt="Button" src="button.svg" />
-            <div className="input-field-email">
-              <div className="overlap-group-2">
-                <div className="enter-your-message">Enter your message...</div>
-                {/* <img className="img" alt="Enter your message" src="enter-your-message.svg" /> */}
-              </div>
-            </div>
-            <div className="input-field-name">
-              <div className="overlap-2">
-                <div className="text-wrapper-2">Enter your name</div>
-                {/* <img className="enter-your-name" alt="Enter your name" src="enter-your-name.svg" /> */}
-              </div>
-            </div>
-            <div className="overlap-wrapper">
-              <div className="overlap-3">
-                <div className="text-wrapper-2">Enter your email</div>
-                {/* <img className="enter-your-email" alt="Enter your email" src="enter-your-email.svg" /> */}
-              </div>
-            </div>
-            <div className="input-field-contact">
-              <div className="overlap-4">
-                <div className="text-wrapper-3">Contact No.</div>
-                <img className="contact-no" alt="Contact no" src="contact-no.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1>Having a Little Bit of Trouble?</h1>
+        <p>Fill out this form to request our services</p>
+        <button onClick={() => navigate("/services")}>Submit Here!</button>
       </div>
     );
   };
+
 
   export const Footer = () => {
     const navigate = useNavigate();
