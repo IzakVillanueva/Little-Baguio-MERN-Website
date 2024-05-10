@@ -3,6 +3,7 @@ import {InfoOutlined, PhoneOutlined} from '@mui/icons-material';
 import FlexBetween from "components/FlexBetween";
 import Navbar from "scenes/navbar";
 import { useState } from "react";
+import { Footer } from "scenes/homePage";
 
 const ResourcePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
@@ -173,21 +174,31 @@ const ResourcePage = () => {
                         >
                             Feedback & Complaints
                     </Typography>
-                    <Box alignItems="center">
+                    <Box align="center" paddingTop={10}>
                         <TextField value={value} 
                             onChange={(e)=>setValue(e.target.value)}
-                            backgroundColor="#fff"/>
-                            <TextField value={value} 
+                            backgroundColor="#fff"
+                            placeholder="Services and Operations"
+                            style={{ width: '700px', height: '100px', fontSize: '16px' }}/>
+                    </Box>
+                    <Box align="center" paddingTop={5}>
+                        <TextField value={value} 
                             onChange={(e)=>setValue(e.target.value)}
-                            backgroundColor="#fff"/>
-                        <Button type="submit" onClick={handleSubmit} m="auto">
+                            multiline
+                            rows={8}
+                            backgroundColor="#fff"
+                            placeholder="Enter your message"
+                            style={{ width: '700px', height: '100px', fontSize: '16px' }}/>
+                    </Box>
+                    <Box align="center" paddingTop={20}>
+                        <Button type="submit" onClick={handleSubmit} m="auto" style={{fontSize: '13px'}}>
                             Submit
                         </Button>
                     </Box>
                 </Box>
                 </Box>
             </Box>
-            
+            <Footer/>
         </Box>
     );
 };
