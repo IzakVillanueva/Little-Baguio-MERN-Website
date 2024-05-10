@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
 
 .hero{
     background-image: url("../../../public/assets/heroimage.png");
@@ -62,7 +64,7 @@
 
 .about .text-wrapper {
     color: #2f2f2f;
-    font-family: "Roboto Slab-Bold", Helvetica;
+    font-family: "Roboto Slab";
     font-size: 3em;
     font-weight: 700;
     letter-spacing: 0; 
@@ -382,11 +384,11 @@
   top: 157px;
   width: 677px;
 }
-
+/* Start of the Service-Request */
 .service-request {
   background-color: #ffffff;
   height: 846px;
-  width: 1681px;
+  width: auto;
 }
 
 .service-request .overlap {

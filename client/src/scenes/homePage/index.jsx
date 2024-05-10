@@ -33,7 +33,9 @@ const HomePage = () => {
             <section> {/* NEWS */} 
               <News />
             </section>
-
+            <section>
+              
+            </section>
             <section> {/* FOOTER */} 
               <Footer />
             </section>

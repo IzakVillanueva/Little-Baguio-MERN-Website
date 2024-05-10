@@ -1,15 +1,34 @@
 import { Box, Button, TextField, Typography, useMediaQuery } from "@mui/material";
 import Navbar from "scenes/navbar";
 import { useState } from "react";
+import { Footer } from "scenes/homePage";
 
 const ServicePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
     const [value, setValue] = useState('');
+    const [Namevalue, setNameValue] = useState('');
+    const [Emailvalue, setEmailValue] = useState('');
+    const [Contactvalue, setContactValue] = useState('');
+    const [Messagevalue, setMessageValue] = useState('');
 
     const handleSubmit = (e) => {
         setValue('');
         e.preventDefault();
     }
+    const handleName = (e) => {
+        setNameValue(e.target.value);
+    };
+    const handleEmail = (e) => {
+        setEmailValue(e.target.value);
+    };
+    const handleContact = (e) => {
+        setContactValue(e.target.value);
+    };
+    const handleMessage = (e) => {
+        setMessageValue(e.target.value);
+    };
+
+
     return (
         <Box>
             <Navbar />
@@ -23,7 +42,7 @@ const ServicePage = () => {
                     Services
                 </Typography>
             </Box>
-            <Box backgroundColor={"#E2DFD5"} p={isNonMobileScreens ? "1.5em" : "0"}>
+            <Box backgroundColor={"#FFFF"} p={isNonMobileScreens ? "1.5em" : "0"}>
                 <Typography
                         fontFamily={"Montserrat"}
                         fontWeight={"700"}
@@ -31,17 +50,49 @@ const ServicePage = () => {
                         align="center"
                         fontSize={isNonMobileScreens ? "3em" : "1em"}
                     >
-                        Feedback & Complaints
+                        Service Request Form
                 </Typography>
-                <Box alignItems="center">
-                    <TextField value={value} 
-                        onChange={(e)=>setValue(e.target.value)}
-                        backgroundColor="#fff"/>
-                    <Button type="submit" onClick={handleSubmit} m="auto">
-                        Submit
-                    </Button>
+            </Box>
+            <Box backgroundColor={"#FFFF"} p={isNonMobileScreens ? "1.5em" : "0"}>
+                <Box alignItems="center" flexDirection="coulumn">
+                    <Box align="center">
+                        <TextField value={Namevalue} 
+                        onChange={handleName}
+                        backgroundColor="#fff"
+                        placeholder="Enter your name"
+                        style={{ width: isNonMobileScreens ? '700px' : '100%', height: '40px', fontSize: isNonMobileScreens ? '16px' : '14px' }}/>
+                    </Box>
+                    <Box align="center" paddingTop={5}>
+                        <TextField value={Emailvalue} 
+                            onChange={handleEmail}
+                            backgroundColor="#fff"
+                            placeholder="Enter your email"
+                            style={{ width: isNonMobileScreens ? '345px' : '100%', height: '40px', fontSize: isNonMobileScreens ? '16px' : '14px', marginLeft: isNonMobileScreens ? '10px' : '0', marginTop: isNonMobileScreens ? '0' : '10px' }}
+                        />
+                        <TextField value={Contactvalue} 
+                            onChange={handleContact}
+                            backgroundColor="#fff"
+                            placeholder="Contact No."
+                            style={{ width: isNonMobileScreens ? '345px' : '100%', height: '40px', fontSize: isNonMobileScreens ? '16px' : '14px', marginLeft: isNonMobileScreens ? '10px' : '0', marginTop: isNonMobileScreens ? '0' : '10px' }}
+                        />
+                    </Box>
+                    <Box align="center" paddingTop={5}>
+                        <TextField value={Messagevalue} 
+                        onChange={handleMessage}
+                        backgroundColor="#fff"
+                        placeholder="Enter your message"
+                        multiline
+                        rows={4}
+                        style={{ width: isNonMobileScreens ? '700px' : '100%', height: '100px', fontSize: isNonMobileScreens ? '16px' : '14px' }}/>
+                    </Box>
+                    <Box align="center" paddingTop={5}>
+                        <Button type="submit" onClick={handleSubmit} m="auto" style={{ fontSize: isNonMobileScreens ? '13px' : '12px', padding: isNonMobileScreens ? '10px 20px' : '8px 16px' }}>
+                            Submit
+                        </Button>
+                    </Box>
                 </Box>
             </Box>
+            <Footer />
         </Box>
     );
 };

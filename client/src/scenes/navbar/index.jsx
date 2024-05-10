@@ -88,6 +88,7 @@ const Navbar = () => {
                   }}>Services</InputLabel>
                 <Select 
                   labelId="services-text" 
+                  value="Services"
                   sx={{
                     m:"auto",
                     width: "200px",
