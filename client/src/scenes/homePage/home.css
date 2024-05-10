@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
-
 .hero{
     background-image: url("../../../public/assets/heroimage.png");
     background-size: cover;
@@ -218,8 +217,27 @@
 }
 
 .community-forum {
-  height: 673px;
-  width: 1715px;
+  height: auto;
+  width: auto;
+  background-color: #53b691;
+  display: flex;
+  vertical-align: top;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.community-forum h1{
+  font-size: 128px;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+.community-forum p{
+  align-items: center;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-weight: 500;
 }
 
 .community-forum .overlap-group {
@@ -416,203 +434,6 @@
   text-decoration: none;
   color: #00D5FA;
   font-size: 20px;
-}
-
-.service-request .overlap {
-  background-color: #ffffff;
-  height: 846px;
-  position: relative;
-}
-
-.service-request .overlap-group {
-  height: 198px;
-  left: 469px;
-  position: absolute;
-  top: 63px;
-  width: 807px;
-}
-
-.service-request .text-wrapper {
-  color: #2f2f2f;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 36px;
-  font-weight: 300;
-  left: 49px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 110px;
-  width: 709px;
-}
-
-.service-request .header1 {
-  color: #2f2f2f;
-  font-family: "Roboto Slab-Bold", Helvetica;
-  font-size: 70px;
-  font-weight: 700;
-  height: 123px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 807px;
-}
-
-.service-request .forms {
-  height: 465px;
-  left: 438px;
-  position: absolute;
-  top: 305px;
-  width: 870px;
-}
-
-.service-request .button {
-  height: 71px;
-  left: 612px;
-  position: absolute;
-  top: 395px;
-  width: 259px;
-}
-
-.service-request .input-field-email {
-  height: 209px;
-  left: 0;
-  position: absolute;
-  top: 160px;
-  width: 872px;
-}
-
-.service-request .overlap-group-2 {
-  height: 212px;
-  left: -2px;
-  position: relative;
-  top: -2px;
-  width: 873px;
-}
-
-.service-request .enter-your-message {
-  color: #2f2f2f;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  left: 28px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 24px;
-  width: 289px;
-}
-
-.service-request .img {
-  height: 212px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 873px;
-}
-
-.service-request .input-field-name {
-  height: 54px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 872px;
-}
-
-.service-request .overlap-2 {
-  height: 57px;
-  left: -2px;
-  position: relative;
-  top: -2px;
-  width: 873px;
-}
-
-.service-request .text-wrapper-2 {
-  color: #2f2f2f;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  left: 32px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 14px;
-  width: 253px;
-}
-  
-.service-request .enter-your-name {
-  height: 57px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 873px;
-}
-
-.service-request .overlap-wrapper {
-  height: 56px;
-  left: 0;
-  position: absolute;
-  top: 81px;
-  width: 433px;
-}
-
-.service-request .overlap-3 {
-  height: 59px;
-  left: -2px;
-  position: relative;
-  top: -2px;
-  width: 434px;
-}
-
-.service-request .enter-your-email {
-  height: 59px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 434px;
-}
-
-.service-request .input-field-contact {
-  height: 56px;
-  left: 465px;
-  position: absolute;
-  top: 81px;
-  width: 407px;
-}
-
-.service-request .overlap-4 {
-  height: 59px;
-  left: -2px;
-  position: relative;
-  top: -2px;
-  width: 408px;
-}
-
-.service-request .text-wrapper-3 {
-  color: #2f2f2f;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  left: 31px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 14px;
-  width: 176px;
-}
-
-.service-request .contact-no {
-  height: 59px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 408px;
 }
 
 .footer {

@@ -29,7 +29,9 @@ const HomePage = () => {
                 </div>
               </div>
             </section>
-
+            <section>
+              <CommunityForum/>
+            </section>
             <section> {/* NEWS */} 
               <News />
             </section>
@@ -149,16 +151,7 @@ export const News = () => {
   export const CommunityForum = () => {
     return (
       <div className="community-forum">
-        <div className="overlap-group">
-          {/* <img className="rectangle" alt="Rectangle" src="rectangle-17.png" /> */}
-          <div className="text-wrapper">Connect with Us!</div>
-          <img className="button" alt="Button" src="button.svg" />
-          <p className="join-our-community">
-            Join our community forum to meet your online neighbors, swap stories, and exchange tips on everything from
-            gardening to local events. Whether you&#39;re seeking advice or simply craving a chat over a virtual fence,
-            you&#39;ll find a warm welcome here. Come on in and become a part of our close-knit online neighborhood today!
-          </p>
-        </div>
+          <h1>Connect with Us!</h1>
       </div>
     );
   };
