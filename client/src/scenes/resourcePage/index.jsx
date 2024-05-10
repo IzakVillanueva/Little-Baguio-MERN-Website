@@ -174,24 +174,24 @@ const ResourcePage = () => {
                         >
                             Feedback & Complaints
                     </Typography>
-                    <Box align="center" paddingTop={10}>
+                    <Box align="center" paddingTop={5}>
                         <TextField value={value} 
                             onChange={(e)=>setValue(e.target.value)}
                             backgroundColor="#fff"
                             placeholder="Services and Operations"
-                            style={{ width: '700px', height: '100px', fontSize: '16px' }}/>
+                            style={{ width: isNonMobileScreens ? '700px' : '100%', height: '100px', fontSize: isNonMobileScreens ? '16px' : '14px' }}/>
                     </Box>
-                    <Box align="center" paddingTop={5}>
+                    <Box align="center" paddingTop={1}>
                         <TextField value={value} 
                             onChange={(e)=>setValue(e.target.value)}
                             multiline
                             rows={8}
                             backgroundColor="#fff"
                             placeholder="Enter your message"
-                            style={{ width: '700px', height: '100px', fontSize: '16px' }}/>
+                            style={{ width: isNonMobileScreens ? '700px' : '100%', height: '100px', fontSize: isNonMobileScreens ? '16px' : '14px' }}/>
                     </Box>
                     <Box align="center" paddingTop={20}>
-                        <Button type="submit" onClick={handleSubmit} m="auto" style={{fontSize: '13px'}}>
+                        <Button type="submit" onClick={handleSubmit} m="auto" style={{ fontSize: isNonMobileScreens ? '13px' : '12px', padding: isNonMobileScreens ? '10px 20px' : '8px 16px' }}>
                             Submit
                         </Button>
                     </Box>
