@@ -48,7 +48,7 @@ import {
         formData.append("replyDescription", description);
       }
   
-      const response = await fetch(`http://localhost:3001/forums`, {
+      const response = await fetch(`https://littlebaguio-api.vercel.app/forums`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,

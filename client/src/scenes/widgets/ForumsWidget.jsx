@@ -9,7 +9,7 @@ const ForumsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getForums = async () => {
-    const response = await fetch("http://localhost:3001/forums", {
+    const response = await fetch("https://littlebaguio-api.vercel.app/forums", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
