@@ -239,15 +239,13 @@ export const News = () => {
           <div className="blocking">
             <p className="headings">Community</p>
             <p className="selection" onClick={() => navigate("/news")} style={{ cursor: 'pointer'}}>News</p>
-            <p className="selection">Forum</p>
+            <p className="selection" onClick={() => navigate("/forums")} style={{ cursor: 'pointer'}}>Forum</p>
           </div>
 
           <div className="blocking">
             <p className="headings">Services</p>
-            <p className="selection">Requests</p>
-            <p className="selection">Feedback</p>
-            <p className="selection">Directory</p>
-            <p className="selection">Resources</p>
+            <p className="selection" onClick={() => navigate("/services")} style={{ cursor: 'pointer'}}>Requests</p>
+            <p className="selection" onClick={() => navigate("/services")} style={{ cursor: 'pointer'}}>Resources</p>
           </div>
 
           <div className="blocking">
