@@ -18,7 +18,7 @@ const ForumPage = () => {
             p="1rem 6%"
             textAlign="center"
         >
-            <Typography fontWeight="bold" fontSize="32px" color="#303030" padding="2rem">
+            <Typography fontWeight="bold" fontSize="96px" color="#303030" padding="2rem">
                 Community Forum
             </Typography>
         </Box>

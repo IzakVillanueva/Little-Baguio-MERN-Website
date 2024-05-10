@@ -10,10 +10,19 @@ const ServicePage = () => {
     const [Emailvalue, setEmailValue] = useState('');
     const [Contactvalue, setContactValue] = useState('');
     const [Messagevalue, setMessageValue] = useState('');
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
     const handleSubmit = (e) => {
         setValue('');
         e.preventDefault();
+        setShowSuccessMessage(true);
+        setTimeout(() => {
+            setShowSuccessMessage(false);
+            setNameValue('');
+            setEmailValue('');
+            setContactValue('');
+            setMessageValue('');
+        }, 2000);
     }
     const handleName = (e) => {
         setNameValue(e.target.value);
@@ -38,7 +47,7 @@ const ServicePage = () => {
                 p="1rem 6%"
                 textAlign="center"
             >
-                <Typography fontWeight="bold" fontSize="32px" color="#303030" padding="2rem">
+                <Typography fontWeight="bold" fontSize="96px" color="#303030" padding="2rem">
                     Services
                 </Typography>
             </Box>
@@ -91,6 +100,31 @@ const ServicePage = () => {
                         </Button>
                     </Box>
                 </Box>
+            </Box>
+            <Box backgroundColor={"#FFFF"} p={isNonMobileScreens ? "1.5em" : "0"}>
+                {showSuccessMessage && (
+                    <Box
+                        position="fixed"
+                        top="0"
+                        left="0"
+                        width="100%"
+                        height="100%"
+                        backgroundColor="rgba(0, 0, 0, 0.5)" 
+                        zIndex="9999" 
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <Box
+                            backgroundColor="#ffffff"
+                            padding="20px"
+                            borderRadius="10px"
+                            boxShadow="0px 0px 10px rgba(0, 0, 0, 0.2)"
+                            textAlign="center">
+                                <Typography variant="body1">Service Request Sent Successfully</Typography>
+                        </Box>    
+                    </Box>
+                )}
             </Box>
             <Footer />
         </Box>
