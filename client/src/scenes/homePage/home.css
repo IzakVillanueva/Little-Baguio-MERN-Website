@@ -389,6 +389,33 @@
   background-color: #ffffff;
   height: 846px;
   width: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-request h1{
+  font-size: 70px;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+
+.service-request p{
+  font-size: 36px;
+  font-family: "Montserrat";
+  
+}
+.service-request button{
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: none;
+  color: #00D5FA;
+  font-size: 20px;
 }
 
 .service-request .overlap {
@@ -419,7 +446,7 @@
   width: 709px;
 }
 
-.service-request .div {
+.service-request .header1 {
   color: #2f2f2f;
   font-family: "Roboto Slab-Bold", Helvetica;
   font-size: 70px;
