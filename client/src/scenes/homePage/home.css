@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
-
 .hero{
     background-image: url("../../../public/assets/heroimage.png");
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     padding-top: 5%;
     box-shadow: inset 0 0 0 1000px rgba(164, 240, 250, 0.3);
 }
@@ -14,6 +13,7 @@
 .hero h1{
     font-size: 5em;
     color: #fff;
+    margin-top: 10vw;
     margin-left: 4vw;
     margin-right: 40vw;
     font-family: "Montserrat", sans-serif;
@@ -139,10 +139,26 @@
   display: flex;
   width: 50vw;
 }
-.news .button {
+.news .button{
   object-fit: cover;
-  height: 2.3rem;
+  height: auto;
+  width: auto;
   margin-top: 2rem;
+  border-color: #303030;
+  border-radius: 20vb;
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-size: 24px;
+  color: #303030;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  padding: 2% 5%;
+  line-height: 1rem;
+}
+.news .button:hover{
+  background-color: #d5f7ff;
 }
 
 .news .text-wrapper {
@@ -161,6 +177,7 @@
   width: 14rem;
   object-fit: cover;
   margin-right: 1rem;
+  border-radius: 10%;
 }
 
 .news .image-placeholder2 {
@@ -168,6 +185,7 @@
   width: 14rem;
   object-fit: none;
   margin-right: 1rem;
+  border-radius: 10%;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -212,68 +230,59 @@
   }
   .news .button {
     object-fit: cover;
-    height: 1rem;
+    padding: 4% 8%;
+    font-size: 3vw; 
+    border-radius: 10px;
     margin: auto;
   }
 }
 
 .community-forum {
-  height: 673px;
-  width: 1715px;
+  background-image: url("../../../public/assets/ConnectWithUsBG.png");
+  height: auto;
+  width: auto;
+  box-shadow: inset 0 0 0 1000px rgba(47, 255, 218, 0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
 
-.community-forum .overlap-group {
-  /* background-image: url(./rectangle-18.png); */
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 673px;
-  left: 5px;
-  position: relative;
-  width: 1680px;
-}
-
-.community-forum .rectangle {
-  height: 673px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1680px;
-}
-
-.community-forum .text-wrapper {
-  color: #ffffff;
-  font-family: "Roboto Slab-Bold", Helvetica;
+.community-forum h1{
   font-size: 128px;
-  font-weight: 700;
-  left: 252px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 115px;
-  width: 1182px;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  margin-bottom: 0;
 }
-
-.community-forum .button {
-  height: 67px;
-  left: 663px;
-  position: absolute;
-  top: 436px;
-  width: 259px;
-}
-
-.community-forum .join-our-community {
-  color: #ffffff;
-  font-family: "Montserrat-Medium", Helvetica;
+.community-forum p{
+  align-items: center;
   font-size: 24px;
+  color: #ffffff;
+  font-family: "Montserrat";
   font-weight: 500;
-  left: 50px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
+}
+.community-forum button{
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-family: "Montserrat";
   text-align: center;
-  top: 300px;
-  width: 1586px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 80px;
+}
+.community-forum button:hover{
+  background-color: #ffffff;
+}
+@media (max-width: 1050px) {
+  .community-forum h1 {
+    font-size: 6vw; 
+  }
+  .community-forum p {
+    font-size: 3vw; 
+  }
 }
 
 .trackin-requests {
@@ -416,203 +425,6 @@
   text-decoration: none;
   color: #00D5FA;
   font-size: 20px;
-}
-
-.service-request .overlap {
-  background-color: #ffffff;
-  height: 846px;
-  position: relative;
-}
-
-.service-request .overlap-group {
-  height: 198px;
-  left: 469px;
-  position: absolute;
-  top: 63px;
-  width: 807px;
-}
-
-.service-request .text-wrapper {
-  color: #2f2f2f;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 36px;
-  font-weight: 300;
-  left: 49px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 110px;
-  width: 709px;
-}
-
-.service-request .header1 {
-  color: #2f2f2f;
-  font-family: "Roboto Slab-Bold", Helvetica;
-  font-size: 70px;
-  font-weight: 700;
-  height: 123px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 807px;
-}
-
-.service-request .forms {
-  height: 465px;
-  left: 438px;
-  position: absolute;
-  top: 305px;
-  width: 870px;
-}
-
-.service-request .button {
-  height: 71px;
-  left: 612px;
-  position: absolute;
-  top: 395px;
-  width: 259px;
-}
-
-.service-request .input-field-email {
-  height: 209px;
-  left: 0;
-  position: absolute;
-  top: 160px;
-  width: 872px;
-}
-
-.service-request .overlap-group-2 {
-  height: 212px;
-  left: -2px;
-  position: relative;
-  top: -2px;
-  width: 873px;
-}
-
-.service-request .enter-your-message {
-  color: #2f2f2f;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  left: 28px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 24px;
-  width: 289px;
-}
-
-.service-request .img {
-  height: 212px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 873px;
-}
-
-.service-request .input-field-name {
-  height: 54px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 872px;
-}
-
-.service-request .overlap-2 {
-  height: 57px;
-  left: -2px;
-  position: relative;
-  top: -2px;
-  width: 873px;
-}
-
-.service-request .text-wrapper-2 {
-  color: #2f2f2f;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  left: 32px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 14px;
-  width: 253px;
-}
-  
-.service-request .enter-your-name {
-  height: 57px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 873px;
-}
-
-.service-request .overlap-wrapper {
-  height: 56px;
-  left: 0;
-  position: absolute;
-  top: 81px;
-  width: 433px;
-}
-
-.service-request .overlap-3 {
-  height: 59px;
-  left: -2px;
-  position: relative;
-  top: -2px;
-  width: 434px;
-}
-
-.service-request .enter-your-email {
-  height: 59px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 434px;
-}
-
-.service-request .input-field-contact {
-  height: 56px;
-  left: 465px;
-  position: absolute;
-  top: 81px;
-  width: 407px;
-}
-
-.service-request .overlap-4 {
-  height: 59px;
-  left: -2px;
-  position: relative;
-  top: -2px;
-  width: 408px;
-}
-
-.service-request .text-wrapper-3 {
-  color: #2f2f2f;
-  font-family: "Montserrat-Light", Helvetica;
-  font-size: 24px;
-  font-weight: 300;
-  left: 31px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 14px;
-  width: 176px;
-}
-
-.service-request .contact-no {
-  height: 59px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 408px;
 }
 
 .footer {

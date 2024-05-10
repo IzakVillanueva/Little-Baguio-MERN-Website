@@ -29,7 +29,9 @@ const HomePage = () => {
                 </div>
               </div>
             </section>
-
+            <section>
+              <CommunityForum/>
+            </section>
             <section> {/* NEWS */} 
               <News />
             </section>
@@ -55,7 +57,7 @@ export const News = () => {
             <img className="image-placeholder" alt="Image placeholder" src="../../../../assets/samplenewsimage1.jpg" />
             <div className="overlap">
               <p className="text-wrapper">Fiesta in Barangay Little Baguio</p>
-              <img className="button" alt="Button" src="../../../../assets/ButtonLM.png" />
+              <button className="button" onClick={() => navigate("/news")}>Learn More</button>
             </div>
           </div>
 
@@ -63,7 +65,7 @@ export const News = () => {
             <img className="image-placeholder" alt="Image placeholder" src="../../../../assets/samplenewsimage2.jpg" />
             <div className="overlap">
               <p className="text-wrapper">San Juan Para Games 2024</p>
-              <img className="button" alt="Button" src="../../../../assets/ButtonLM.png" />
+              <button className="button" onClick={() => navigate("/news")}>Learn More</button>
             </div>
           </div>
         </div>
@@ -73,7 +75,7 @@ export const News = () => {
             <img className="image-placeholder" alt="Image placeholder" src="../../../../assets/samplenewsimage3.jpg" />
             <div className="overlap">
               <p className="text-wrapper">BIDA Program Anniversary Celebration</p>
-              <img className="button" alt="Button" src="../../../../assets/ButtonLM.png" />
+              <button className="button" onClick={() => navigate("/news")}>Learn More</button>
             </div>
           </div>
 
@@ -81,7 +83,7 @@ export const News = () => {
             <img className="image-placeholder2" alt="Image placeholder" src="../../../../assets/samplenewsimage4.png" />
             <div className="overlap">
               <p className="text-wrapper">Ermitaño Creek Clean Up Operation</p>
-              <img className="button" alt="Button" src="../../../../assets/ButtonLM.png" />
+              <button className="button" onClick={() => navigate("/news")}>Learn More</button>
             </div>
           </div>
         </div>
@@ -147,18 +149,21 @@ export const News = () => {
   };
 
   export const CommunityForum = () => {
+    const navigate = useNavigate();
     return (
       <div className="community-forum">
-        <div className="overlap-group">
-          {/* <img className="rectangle" alt="Rectangle" src="rectangle-17.png" /> */}
-          <div className="text-wrapper">Connect with Us!</div>
-          <img className="button" alt="Button" src="button.svg" />
-          <p className="join-our-community">
-            Join our community forum to meet your online neighbors, swap stories, and exchange tips on everything from
-            gardening to local events. Whether you&#39;re seeking advice or simply craving a chat over a virtual fence,
-            you&#39;ll find a warm welcome here. Come on in and become a part of our close-knit online neighborhood today!
-          </p>
-        </div>
+          <h1>Connect with Us!</h1>
+            <p>Join our community forum to meet your online neighbors, swap stories, and exchange tips on everything from gardening to local
+              <br />
+              events. Whether you're seeking advice or simply craving a chat over a virtual fence, you'll find a warm welcome here. Come on in
+              <br />
+              <span style={{ display: "block", textAlign: "center" }}>
+                and become a part of our close-knit online neighborhood today!
+              </span>
+            </p>
+            <button onClick={() => navigate("/forums")}>
+              Join Here!
+            </button>
       </div>
     );
   };
